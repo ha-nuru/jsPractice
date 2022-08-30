@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+h3 {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.tab-wrap {
+	max-width: 500px;
+}
+
+.tab {
+	display: flex;
+	border: 1px solid #ddd;
+	background-color: #f1f1f1;
+}
+
+.tab button.tablinks {
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 16px;
+}
+
+.tab button.tablinks:hover,
+.tab button.tablinks:focus,
+.tab button.tablinks.active {
+	background-color: #dddddd75;
+}
+
+.tabcontent {
+	display: none;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}

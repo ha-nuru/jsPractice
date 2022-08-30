@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/tab.css">
+	<title>Tab Example</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<h3 id="tablist-1">Tab Example</h3>
+		<hr>
+		<div class="tabs">
+			<div class="manual" role="tablist" aria-labelledby="tablist-1">
+				<button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">tab1</button>
+				<button id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">tab2</button>
+				<button id="tab-3" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">tab3</button>
+				<button id="tab-4" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1">tab4</button>
+			</div>
+		</div>
+		<div class="tab-contents">
+			<div id="tabpanel-1" role="tabpenel" aria-labelledby="tab-1">1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nemo culpa quia eaque perspiciatis sapiente in corrupti quisquam voluptate ea neque consequatur, architecto commodi harum magnam iste. Tempore, quia ab?</div>
+			<div id="tabpanel-2" role="tabpenel" aria-labelledby="tab-2" class="is-hidden">2. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nemo culpa quia eaque perspiciatis sapiente in corrupti quisquam voluptate ea neque consequatur, architecto commodi harum magnam iste. Tempore, quia ab?</div>
+			<div id="tabpanel-3" role="tabpenel" aria-labelledby="tab-3" class="is-hidden">3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nemo culpa quia eaque perspiciatis sapiente in corrupti quisquam voluptate ea neque consequatur, architecto commodi harum magnam iste. Tempore, quia ab?</div>
+			<div id="tabpanel-4" role="tabpenel" aria-labelledby="tab-4" class="is-hidden">4. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nemo culpa quia eaque perspiciatis sapiente in corrupti quisquam voluptate ea neque consequatur, architecto commodi harum magnam iste. Tempore, quia ab?</div>
+		</div>
+	</div>
+	<script src="js/tab.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h3 {
+	padding: 20px 0;
+}
+
+.tabs {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.manual[role="tablist"] {
+	display: flex;
+	flex-direction: row;
+}
+
+button[role="tab"] {
+	background-color: inherit;
+	outline: none;
+	font-weight: bold;
+	border: 1px solid #ddd;
+	padding: 10px 16px;
+}
+
+button[role="tab"]:not(:last-of-type) {
+	border-right: none;
+}
+
+button[role="tab"]:focus,
+button[role="tab"]:hover {
+	background-color: #ebebeb;
+}
+
+.tab-contents {
+	font-size: 12px;
+	padding: 10px;
+	border: 1px solid #eee;
+	margin-top: 10px;
+}
+
+div[role="tabpenel"].is-hidden {
+	display: none;
+}

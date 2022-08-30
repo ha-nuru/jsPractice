@@ -2,13 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>tab</title>
 </head>
 
 <body>
+	<div class="tab-wrap">
+		<div class="tab" role="tablist">
+			<button class="tablinks" onclick="openCity(event, 'London')" id="defaultClick" aria-controls="tabpanel1" role="tab" aria-selected="true" tabindex="tabIndex"> London </button>
+			<button class="tablinks" onclick="openCity(event, 'Paris')" aria-controls="tabpanel2" role="tab" aria-selected="false" tabindex="tabIndex"> Paris </button>
+			<button class="tablinks" onclick="openCity(event, 'Tokyo')" aria-controls="tabpanel3" role="tab" aria-selected="false" tabindex="tabIndex"> Tokyo </button>
+		</div>
+		<div class="tabcontents">
+			<div id="London" class="tabcontent">
+				<h3>london</h3>
+				<p>london</p>
+				<p>london</p>
+				<p>london</p>
+			</div>
+			<div id="Paris" class="tabcontent">
+				<h3>paris</h3>
+				<p>paris</p>
+				<p>paris</p>
+				<p>paris</p>
+			</div>
+			<div id="Tokyo" class="tabcontent">
+				<h3>tokyo</h3>
+				<p>tokyo</p>
+				<p>tokyo</p>
+				<p>tokyo</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		function openCity(evt, citiName) {
+			let i, tabContent, tabLinks;
+			tabContent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabContent.length; i++) {
+				tabContent[i].style.display = "none";
+			}
+			tabLinks = document.getElementsByClassName("tablinks");
+			tabIndex = document.querySelectorAll("[tabindex]");
+			for (i = 0; i < tabLinks.length; i++) {
+				tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+				if (tabLinks[i] === tabIndex[i]) {
+					console.log(i);
+				}
+			}
+			document.getElementById(citiName).style.display = "block";
+			evt.currentTarget.className += (" active");
+		}
+		document.getElementById("defaultClick").click();
+	</script>
 </body>
 
 </html>
