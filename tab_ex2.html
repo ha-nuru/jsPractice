@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/tab_ex2.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container">
+		<ul class="tablist" role="tablist">
+			<li id="tab1" class="tab" role="tab" aria-controls="tab-panel1">tab1</li>
+			<li id="tab2" class="tab" role="tab" aria-controls="tab-panel2">tab2</li>
+			<li id="tab3" class="tab" role="tab" aria-controls="tab-panel3">tab3</li>
+		</ul>
+		<div class="tab-cont">
+			<div id="tab-panel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1"> tab1_content </div>
+			<div id="tab-panel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2"> tab2_content </div>
+			<div id="tab-panel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3"> tab3_content </div>
+		</div>
+	</div>
+	<script src="./js/tab_ex2.js"></script>
+</body>
+
+</html>

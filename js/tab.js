@@ -31,6 +31,7 @@ class TabsManual {
 		}
 
 		this.setSelectedTab(this.firstTab);
+
 		console.log(this.firstTab);
 		console.log(this.lastTab);
 	}

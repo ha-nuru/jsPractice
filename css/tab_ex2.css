@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.container {
+	max-width: 1500px;
+	margin: 50px auto 0;
+}
+
+.tablist {
+	display: flex;
+	justify-content: center;
+
+}
+
+.tablist>li.tab {
+	flex: 1;
+	text-align: center;
+}
+
+.tablist>li.tab.active {
+	background-color: #ddd;
+}
+
+.tab-cont>.tabpanel.active {
+	display: block;
+	text-decoration: underline;
+}
+
+.tab-cont>.tabpanel {
+	display: none;
+}
