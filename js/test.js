@@ -268,6 +268,20 @@ let x = 1;
 (x > 0) && console.log('0보다 큽니다')
 
 
+console.log('~~~~~~~~~~~~~~~~~~~~~')
 
+//전개 연산자 
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5];
+const arrWrap1 = [...arr1, ...arr2];
+const arrWrap2 = arr1.concat(arr2);
+arr1.push(...arr2);
+// arr1.push(arr2);
+// 2차원 배열, 배열객체의 프로토타입 메서드 push.apply 사용
+// Array.prototype.push.apply(arr1, arr2); 
+
+console.log(arrWrap1);
+console.log(arrWrap2);
+console.log(arr1);
 
 

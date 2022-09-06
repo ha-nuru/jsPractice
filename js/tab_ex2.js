@@ -8,20 +8,9 @@ $('.tab').on('keydown', function (event) {
 	event = event || window.event;
 	event.preventDefault ? event.preventDefault() : event.returnValue = false;
 	var keycode = event.keycode || event.which;
-	if (!event.shiftKey && keycode === 9) {
-		event.preventDefault ? event.preventDefault() : event.returnValue = false;
-		$('#' + $(this).attr('aria-controls'))
-			.attr('tabindex', '0')
-			.addClass('active')
-			.focus()
-			.siblings('.tabpanel')
-			.attr('tabindex', '-1')
-			.removeClass('active');
-
-	}
 
 	switch (keycode) {
-		case 37: //left errow
+		case 37: //left errow	
 			if (this.previousElementSibling) {
 				$(this)
 					.attr('tabindex', '-1')
@@ -65,6 +54,22 @@ $('.tab').on('keydown', function (event) {
 				.attr('tabindex', '-1')
 				.removeClass('active')
 			break;
+	}
+});
+
+//탭 패널이동 - 활성화 된 탭에서 tab키 누를 경우 연관된 탭 패널로 이동
+$('.tablist').on('keydown', '.active', function (event) {
+	event = event || window.event;
+	var keycode = event.keycode || event.which;
+	if (!event.shiftKey && keycode === 9) {
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+		$('#' + $(this).attr('aria-controls'))
+			.attr('tabindex', '0')
+			.addClass('active')
+			.focus()
+			.siblings('.tabpanel')
+			.attr('tabindex', '-1')
+			.removeClass('active');
 	}
 })
 

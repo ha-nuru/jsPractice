@@ -6,11 +6,18 @@ function chk() {
 	}
 }
 
-$('#gnb>ul>li').mouseover(function () {
+// $('#gnb>ul>li').mouseover(function () {
+// 	setTimeout(chk, 100);
+// 	cc = 1;
+// 	$(this).addClass('active');
+// });
+
+$('#gnb>ul>li').on('mouseover', function () {
 	setTimeout(chk, 100);
 	cc = 1;
 	$(this).addClass('active');
 });
+
 
 $('#gnb').mouseout(function () {
 	setTimeout(chk, 400);
